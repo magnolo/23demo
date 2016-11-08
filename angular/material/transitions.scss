@@ -1,0 +1,101 @@
+[ui-view].ng-enter,
+[ui-view].ng-leave {
+  -webkit-transition: opacity ease-in-out 200ms;
+  transition: opacity ease-in-out 200ms;
+}
+
+[ui-view].ng-enter,
+[ui-view].ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+[ui-view].ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+// Stop the page jump when transitioning from page to page.
+.Page.ng-leave.ng-leave-active {
+  display: none;
+}
+
+
+[ui-view="overlay"].ng-enter,
+[ui-view="overlay"].ng-leave {
+  transition: opacity ease-in-out 500ms;
+  .left, .right{
+    transition: transform ease-in-out 250ms;
+
+  }
+}
+
+[ui-view="overlay"].ng-enter{
+  opacity: 1;
+  .left{
+    transform:translateY(-100%);
+
+  }
+  .right{
+    transform:translateY(100%);
+
+  }
+}
+[ui-view="overlay"].ng-leave.ng-leave-active {
+  opacity: 1;
+  .left{
+    transform:translateX(-100%);
+  }
+  .right{
+    transform:translateX(100%);
+  }
+}
+
+[ui-view="overlay"].ng-enter.ng-enter-active {
+  opacity: 1;
+  .left, .right{
+    transform:translateY(0%);
+  }
+}
+
+
+
+.animate-item.ng-enter, .animate-item.ng-move {
+  transition: all 50s linear;
+  transform:translateY(100%);
+  opacity: 0;
+}
+
+/*
+ The ng-enter-active and ng-move-active
+ are where the transition destination properties
+ are set so that the animation knows what to
+ animate.
+*/
+.animate-item.ng-enter.ng-enter-active,
+.animate-item.ng-move.ng-move-active {
+  opacity: 1;
+  transform:translateY(0%);
+}
+
+/*
+  We're using CSS keyframe animations for when
+  the leave event is triggered for the element
+  that has the .repeated-item class
+*/
+.animate-item.ng-leave {
+  animation: 0.5s my_animation;
+}
+.animate-item.ng-enter-stagger {
+            transition-delay: 1s ;
+                -webkit-transition-delay: 1s ;
+            /*
+                FROM THE DOCUMENTATION:
+                In case the stagger doesn't work then these two values must be set
+                to 0 to avoid an accidental CSS inheritance.
+            */
+            transition-duration: 0s ;
+                -webkit-transition-duration: 0s ;
+        }
+@keyframes my_animation {
+  from { opacity:1;transform:translateY(0%); }
+  to { opacity:0;transform:translateY(100%); }
+}

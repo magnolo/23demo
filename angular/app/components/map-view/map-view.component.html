@@ -1,0 +1,5 @@
+<div>{{ ::vm.indicator.title}}</div>
+<div>{{ ::vm.indicator.description }}</div>
+<!-- <map></map> -->
+<mapboxgl gl-style="'mapbox://styles/mapbox/light-v9'" gl-vector="vm.admin0Layer" height="500px" width="100%" gl-center="[16.372778, 48.209206]"></mapboxgl>
+<div ng-if="vm.countryData">{{ vm.countryData}}</div>

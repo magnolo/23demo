@@ -1,0 +1,9 @@
+<div layout-gt-xs="row" layout="column">
+    <div flex="50" flex-xs class="full-height left">
+        <fullscreen-cover icon="layers" image="{{vm.category.image.src}}" title="{{vm.category.title}}" subtitle="{{vm.category.description}}"></fullscreen-cover>
+    </div>
+    <div flex="50" class="full-height right" layout="column">
+        <category-thumbs categories="vm.categories"></category-thumbs>
+        <indicators-list indicators="vm.indicators" ></indicators-list>
+    </div>
+</div>

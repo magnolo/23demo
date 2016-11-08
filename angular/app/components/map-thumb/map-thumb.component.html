@@ -1,0 +1,33 @@
+<md-card>
+  <img ng-src="{{ ::vm.item.image.src }}" class="md-card-image">
+    <md-card-header ng-if="vm.item.user">
+        <md-card-avatar>
+            <img class="md-user-avatar" ng-src="{{ ::vm.item.user.image.src }}">
+        </md-card-avatar>
+        <md-card-header-text>
+            <span class="md-title">{{ ::vm.item.title }}</span>
+            <span class="md-subhead"><md-icon class="card-pin">place</md-icon> {{ ::vm.item.location.title}} by {{ ::vm.item.user.fullName }} </span>
+            <!-- <span class="md-subhead">{{ ::vm.item.date_created | dateToISO | date:'dd.MM.yyyy' }}</span> -->
+        </md-card-header-text>
+    </md-card-header>
+
+    <!-- <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">{{ ::vm.item.title}}</span>
+            <span class="md-subhead">{{ ::vm.item.location.title}}</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="end center">
+            <md-button class="md-icon-button" aria-label="Favorite">
+              <md-icon >favorite</md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Share">
+              <md-icon>share_arrow</md-icon>
+            </md-button>
+    </md-card-actions> -->
+    <!-- <md-card-content>
+        <md-chips ng-if="vm.item.tags.length">
+            <md-chip ng-repeat="tag in vm.item.tags">{{ ::tag.title }}</md-chip>
+        </md-chips>
+    </md-card-content> -->
+</md-card>

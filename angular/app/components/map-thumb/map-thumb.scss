@@ -1,0 +1,14 @@
+map-thumb{
+  md-card md-card-header md-card-avatar{
+    margin-right:12px;
+    margin-left: 0px !important;
+  }
+  md-card md-card-header md-card-avatar + md-card-header-text .md-title{
+    font-size: 20px;
+  }
+  .card-pin{
+    font-size: 1em;
+width: 1em;
+height: 16px;
+  }
+}

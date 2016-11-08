@@ -1,0 +1,15 @@
+<md-card>
+    <div ui-sref="app.landing.overview.categorie({name:vm.item.name, id:vm.item.id})" class="md-card-image icon" layout="row" layout-align="center center" random-background="{{ vm.item.style.base_color}}">
+      <md-icon>menu</md-icon>
+    </div>
+    <img ng-src="{{ ::vm.item.image.src }}" class="md-card-image">
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">{{ ::vm.item.title}}</span>
+            <span class="md-subhead" ng-if="vm.item.subtitle">{{ ::vm.item.subtitle}}</span>
+        </md-card-title-text>
+    </md-card-title>
+     <md-card-content>
+        <p ng-bind-html="vm.item.description"></p>
+    </md-card-content>
+</md-card>

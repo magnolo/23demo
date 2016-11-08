@@ -1,0 +1,24 @@
+item-thumb{
+  md-card{
+    .md-card-image{
+      &.icon{
+        width:100%;
+        min-height:180px;
+        display: flex;
+        background-color: darkviolet;
+        md-icon{
+          color:#fff;
+          font-size:82px;
+          width:82px;
+          height:82px;
+          min-height:82px;
+          min-width: 82px;
+        }
+      }
+    }
+    > md-card-title{
+      padding-bottom:5px;
+    }
+  }
+
+}

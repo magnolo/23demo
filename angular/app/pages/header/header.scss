@@ -1,0 +1,43 @@
+@import "../../../material/project";
+
+.mainHeader {
+    height: 68px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.mainHeader-container{
+    height: 100%;
+}
+
+.mainHeader-logo {
+
+    height: 41px;
+    padding-top: 13px;
+    color:#000;
+    svg{
+      fill:currentColor;
+    }
+}
+
+.mainHeader-link{
+    text-decoration: none;
+    color: $black !important;
+    padding: 0 20px;
+    display: inline-block;
+    transition: 250ms background-color;
+    line-height: 64px;
+}
+
+.mainHeader-link:hover{
+    background-color: $background;
+}
+
+
+.mainHeader-spacer{
+    padding-top: 64px;
+}
