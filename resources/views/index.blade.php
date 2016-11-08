@@ -21,9 +21,9 @@
 
     <app-shell>
         <div id="app-shell-header">
-            <img src="img/icons/logo.svg" width="171" height="41">
+          23°
         </div>
-        <div id="app-shell-content"></div>
+    Loading...
     </app-shell>
 
     <app-view></app-view>
